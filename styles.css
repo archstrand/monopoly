@@ -1,197 +1,202 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Your Magazine</title>
-  <meta name="description" content="An Atlantic-inspired magazine layout." />
+/* Atlantic-inspired, not a clone. Keep it yours. */
+:root{
+  --bg: #ffffff;
+  --ink: #0a0a0a;
+  --muted: #5a5a5a;
+  --accent: #c5162c; /* restrained red accent */
+  --line: #e8e8e8;
 
-  <!-- Fonts: modern serif + crisp sans (free + permissive) -->
-  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  --serif: "Source Serif 4", ui-serif, Georgia, serif;
+  --sans: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
 
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <a class="skip-link" href="#main">Skip to content</a>
+  --maxw: 1160px;
+  --gutter: 20px;
 
-  <!-- Top utility bar -->
-  <div class="utility">
-    <div class="container utility__inner">
-      <time class="utility__date" datetime="2025-10-15">October 15, 2025</time>
-      <div class="utility__links">
-        <a href="#" class="utility__link">Subscribe</a>
-        <a href="#" class="utility__link">Sign In</a>
-      </div>
-    </div>
-  </div>
+  --fs-xxl: clamp(2rem, 3vw + 1rem, 3.25rem);
+  --fs-xl: clamp(1.625rem, 2.2vw + 1rem, 2.25rem);
+  --fs-lg: clamp(1.125rem, 0.6vw + 1rem, 1.375rem);
+  --fs-md: 1rem;
+  --fs-sm: 0.875rem;
+  --fs-xs: 0.78rem;
 
-  <!-- Header / Masthead -->
-  <header class="site-header">
-    <div class="container header__inner">
-      <a class="brand" href="/" aria-label="Home">
-        <!-- Keep this your own brand name — do not use others' wordmarks -->
-        <span class="brand__masthead">Your Magazine</span>
-      </a>
-      <nav class="primary-nav" aria-label="Primary">
-        <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu">Menu</button>
-        <ul id="nav-menu" class="primary-nav__list">
-          <li><a href="#">Politics</a></li>
-          <li><a href="#">Ideas</a></li>
-          <li><a href="#">Culture</a></li>
-          <li><a href="#">Tech</a></li>
-          <li><a href="#">Science</a></li>
-          <li><a href="#">World</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+  --radius: 6px;
+}
 
-  <!-- Hero / Feature -->
-  <section class="hero">
-    <div class="container hero__grid">
-      <article class="feature">
-        <a class="feature__image-link" href="#">
-          <img src="https://picsum.photos/1200/800?random=3" alt="Feature story image" class="feature__image" />
-        </a>
-        <div class="feature__kicker">Ideas</div>
-        <h1 class="feature__title"><a href="#">The Big Argument Shaping Tomorrow</a></h1>
-        <p class="feature__dek">A crisp, persuasive standfirst that frames the debate and hooks serious readers.</p>
-        <div class="byline">By <a href="#">Alex Writer</a></div>
-      </article>
+*{ box-sizing: border-box; }
+html,body{ height:100%; }
+body{
+  margin:0;
+  color:var(--ink);
+  background:var(--bg);
+  font-family:var(--sans);
+  line-height:1.6;
+  font-size: var(--fs-md);
+}
 
-      <aside class="side-stack" aria-label="Editor’s picks">
-        <h2 class="eyebrow">Editor’s Picks</h2>
-        <ul class="stack">
-          <li class="stack__item">
-            <a href="#" class="stack__link">
-              <span class="stack__kicker">Culture</span>
-              <span class="stack__title">How the Season Changed TV</span>
-            </a>
-          </li>
-          <li class="stack__item">
-            <a href="#" class="stack__link">
-              <span class="stack__kicker">Science</span>
-              <span class="stack__title">The Quiet Math of Survival</span>
-            </a>
-          </li>
-          <li class="stack__item">
-            <a href="#" class="stack__link">
-              <span class="stack__kicker">Politics</span>
-              <span class="stack__title">What Compromise Really Means</span>
-            </a>
-          </li>
-        </ul>
-      </aside>
-    </div>
-  </section>
+img{ max-width:100%; height:auto; display:block; }
+a{ color:inherit; text-decoration: none; }
+a:hover{ text-decoration: underline; text-underline-offset: 2px; }
 
-  <!-- River -->
-  <main id="main" class="container river" role="main">
-    <section aria-labelledby="latest-heading" class="river__section">
-      <h2 id="latest-heading" class="section-head">Latest</h2>
+.container{
+  width:100%;
+  max-width: var(--maxw);
+  margin-inline:auto;
+  padding-inline: var(--gutter);
+}
 
-      <div class="cards">
-        <!-- Card -->
-        <article class="card">
-          <a href="#" class="card__media-link">
-            <img src="https://picsum.photos/640/420?random=11" alt="" class="card__image" loading="lazy" />
-          </a>
-          <div class="card__body">
-            <div class="card__kicker">Politics</div>
-            <h3 class="card__title"><a href="#">The Coalition That Wasn’t</a></h3>
-            <p class="card__dek">Inside the messy mechanics of negotiation and the myths we tell about unity.</p>
-            <div class="card__meta">By Jamie R. • 8 min read</div>
-          </div>
-        </article>
+.skip-link{
+  position: absolute;
+  left:-9999px; top:auto; width:1px; height:1px; overflow:hidden;
+}
+.skip-link:focus{ left: 10px; top: 10px; width:auto; height:auto; padding:8px 10px; background:#000; color:#fff; z-index:999; }
 
-        <article class="card">
-          <a href="#" class="card__media-link">
-            <img src="https://picsum.photos/640/420?random=12" alt="" class="card__image" loading="lazy" />
-          </a>
-          <div class="card__body">
-            <div class="card__kicker">Tech</div>
-            <h3 class="card__title"><a href="#">When Tools Start Arguing Back</a></h3>
-            <p class="card__dek">Why the next wave of software feels less like using an app and more like debate.</p>
-            <div class="card__meta">By Casey Dot • 6 min read</div>
-          </div>
-        </article>
+/* Utility bar */
+.utility{
+  border-bottom:1px solid var(--line);
+  font-size: var(--fs-sm);
+  color: var(--muted);
+}
+.utility__inner{
+  display:flex; align-items:center; justify-content:space-between;
+  padding-block:8px;
+}
+.utility__links{ display:flex; gap:14px; }
+.utility__link{ color: var(--ink); }
 
-        <article class="card">
-          <a href="#" class="card__media-link">
-            <img src="https://picsum.photos/640/420?random=13" alt="" class="card__image" loading="lazy" />
-          </a>
-          <div class="card__body">
-            <div class="card__kicker">Science</div>
-            <h3 class="card__title"><a href="#">Mapping the Edges of Enough</a></h3>
-            <p class="card__dek">A practical guide to scarcity that starts where intuition breaks.</p>
-            <div class="card__meta">By R. Chen • 9 min read</div>
-          </div>
-        </article>
-      </div>
-    </section>
+/* Header / masthead */
+.site-header{
+  border-bottom:1px solid var(--line);
+  background: var(--bg);
+  position: sticky; top:0; z-index:50;
+}
+.header__inner{
+  display:grid;
+  grid-template-columns: 1fr auto;
+  gap: 20px;
+  align-items:center;
+  padding-block: 18px;
+}
+.brand__masthead{
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: var(--fs-xxl);
+  letter-spacing: -0.02em;
+}
+.primary-nav{ position: relative; }
+.nav-toggle{
+  display:none;
+  background:none; border:1px solid var(--line);
+  padding:6px 10px; border-radius: var(--radius);
+}
+.primary-nav__list{
+  display:flex; gap:18px; list-style:none; margin:0; padding:0;
+  font-weight:600; font-size: var(--fs-sm); text-transform: uppercase; letter-spacing:.04em;
+}
+.primary-nav__list a:hover{ color: var(--accent); text-decoration:none; }
 
-    <!-- Section rail with opinion/essays vibe -->
-    <section aria-labelledby="ideas-heading" class="river__section">
-      <h2 id="ideas-heading" class="section-head">Ideas</h2>
-      <div class="listies">
-        <article class="listie">
-          <div class="listie__kicker">Essay</div>
-          <h3 class="listie__title"><a href="#">The Case for Boredom</a></h3>
-          <p class="listie__dek">Attention is not a renewable resource. Spend it like it matters.</p>
-        </article>
-        <article class="listie">
-          <div class="listie__kicker">Argument</div>
-          <h3 class="listie__title"><a href="#">Don’t Fear the Niche</a></h3>
-          <p class="listie__dek">Mass culture isn’t dying—it’s decentralizing.</p>
-        </article>
-        <article class="listie">
-          <div class="listie__kicker">Column</div>
-          <h3 class="listie__title"><a href="#">The Small Politics of Daily Life</a></h3>
-          <p class="listie__dek">Where values actually get practiced: errands and inboxes.</p>
-        </article>
-      </div>
-    </section>
+/* Mobile nav */
+@media (max-width: 900px){
+  .header__inner{ grid-template-columns: 1fr auto; }
+  .nav-toggle{ display:inline-block; }
+  .primary-nav__list{ 
+    position:absolute; right:0; top:calc(100% + 8px);
+    background:#fff; border:1px solid var(--line); border-radius: var(--radius);
+    padding:10px; flex-direction:column; gap:10px; display:none; min-width: 220px;
+    box-shadow: 0 8px 24px rgba(0,0,0,.08);
+  }
+  .primary-nav__list.is-open{ display:flex; }
+}
 
-    <!-- Newsletter block -->
-    <aside class="newsletter" aria-labelledby="nl-head">
-      <h2 id="nl-head">Get our newsletter</h2>
-      <p>Sharp analysis, in your inbox. No noise.</p>
-      <form class="nl-form" action="#" method="post">
-        <label for="email" class="sr-only">Email</label>
-        <input id="email" name="email" type="email" required placeholder="you@example.com" />
-        <button type="submit">Subscribe</button>
-      </form>
-      <small class="nl-note">By subscribing, you agree to our Terms & Privacy.</small>
-    </aside>
-  </main>
+/* Hero */
+.hero{ border-bottom:1px solid var(--line); }
+.hero__grid{
+  display:grid; gap:32px; padding-block: 28px;
+  grid-template-columns: 2fr 1fr;
+}
+@media (max-width: 1020px){ .hero__grid{ grid-template-columns: 1fr; } }
 
-  <!-- Footer -->
-  <footer class="site-footer">
-    <div class="container footer__grid">
-      <nav aria-label="Footer">
-        <ul class="footer__nav">
-          <li><a href="#">About</a></li>
-          <li><a href="#">Masthead</a></li>
-          <li><a href="#">Contact</a></li>
-          <li><a href="#">Careers</a></li>
-          <li><a href="#">Privacy</a></li>
-        </ul>
-      </nav>
-      <div class="footer__copy">© <span id="year"></span> Your Magazine</div>
-    </div>
-  </footer>
+.feature__image{ width:100%; aspect-ratio: 3 / 2; object-fit: cover; }
+.feature__kicker{ color: var(--accent); font-weight:700; letter-spacing:.05em; text-transform:uppercase; font-size: var(--fs-xs); margin-top: 10px; }
+.feature__title{
+  font-family: var(--serif); font-size: var(--fs-xl); line-height:1.1; margin:.25em 0;
+}
+.feature__title a:hover{ color: var(--accent); text-decoration:none; }
+.feature__dek{ font-size: var(--fs-lg); color:#222; margin:.5em 0 0.75em; }
+.byline{ font-size: var(--fs-sm); color: var(--muted); }
 
-  <script>
-    // Simple a11y-friendly menu toggle
-    const btn = document.querySelector('.nav-toggle');
-    const menu = document.querySelector('#nav-menu');
-    btn?.addEventListener('click', () => {
-      const expanded = btn.getAttribute('aria-expanded') === 'true';
-      btn.setAttribute('aria-expanded', String(!expanded));
-      menu.classList.toggle('is-open');
-    });
-    // year
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
-</body>
-</html>
+.eyebrow{ font-size: var(--fs-sm); text-transform: uppercase; letter-spacing:.08em; color: var(--muted); margin:0 0 10px; }
+.stack{ list-style:none; padding:0; margin:0; display:grid; gap:14px; }
+.stack__link{ display:flex; flex-direction:column; gap:2px; }
+.stack__kicker{ color: var(--accent); font-size: var(--fs-xs); text-transform: uppercase; letter-spacing:.06em; font-weight:700; }
+.stack__title{ font-family: var(--serif); font-weight:700; }
+
+/* River */
+.river{ padding-block: 28px; }
+.section-head{
+  font-family: var(--serif); font-size: clamp(1.25rem, 0.9vw + 1rem, 1.75rem);
+  margin: 0 0 14px; letter-spacing:-.01em;
+}
+.cards{
+  display:grid; gap: 24px;
+  grid-template-columns: repeat(3, 1fr);
+}
+@media (max-width: 1100px){ .cards{ grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 720px){ .cards{ grid-template-columns: 1fr; } }
+
+.card{ display:grid; gap: 10px; border-top:1px solid var(--line); padding-top:14px; }
+.card__image{ width:100%; aspect-ratio: 16 / 10; object-fit: cover; }
+.card__kicker{ color: var(--accent); font-weight:700; font-size: var(--fs-xs); letter-spacing:.06em; text-transform: uppercase; }
+.card__title{ font-family: var(--serif); font-size: clamp(1.05rem, 0.6vw + 0.9rem, 1.35rem); line-height:1.2; margin:.15em 0; }
+.card__title a:hover{ color: var(--accent); text-decoration:none; }
+.card__dek{ color:#222; margin:.25em 0 .35em; }
+.card__meta{ font-size: var(--fs-xs); color: var(--muted); }
+
+.listies{ display:grid; gap:16px; grid-template-columns: repeat(3, 1fr); }
+@media (max-width: 900px){ .listies{ grid-template-columns: 1fr; } }
+.listie{ border-top:1px solid var(--line); padding-top:12px; }
+.listie__kicker{ color: var(--accent); font-size: var(--fs-xs); font-weight:700; letter-spacing:.06em; text-transform: uppercase; }
+.listie__title{ font-family: var(--serif); font-weight:700; margin:.2em 0; }
+.listie__dek{ color:#222; }
+
+/* Newsletter */
+.newsletter{
+  border:1px solid var(--line);
+  padding: 18px;
+  margin: 34px 0;
+  border-radius: var(--radius);
+  background: #fafafa;
+}
+.nl-form{ display:flex; gap:10px; margin-top: 8px; }
+.nl-form input{
+  flex:1; padding:10px 12px; border:1px solid var(--line); border-radius: var(--radius);
+  font-size: var(--fs-md);
+}
+.nl-form button{
+  border:1px solid var(--ink); background: var(--ink); color:#fff; padding:10px 14px;
+  border-radius: var(--radius); font-weight:600; cursor:pointer;
+}
+.nl-form button:hover{ filter: brightness(0.95); }
+.nl-note{ display:block; color: var(--muted); margin-top: 8px; font-size: var(--fs-xs); }
+
+/* Footer */
+.site-footer{
+  border-top:1px solid var(--line); padding-block: 26px; color: var(--muted);
+}
+.footer__grid{ display:flex; align-items:center; justify-content:space-between; gap: 16px; }
+.footer__nav{ list-style:none; padding:0; margin:0; display:flex; gap: 16px; }
+.footer__nav a{ color: var(--muted); }
+.footer__nav a:hover{ color: var(--ink); text-decoration:none; }
+
+/* Helpers */
+.sr-only{
+  position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden;
+  clip:rect(0,0,0,0); white-space:nowrap; border:0;
+}
+
+/* Optional dark mode */
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#0c0c0c; --ink:#f5f5f5; --muted:#b2b2b2; --line:#262626;
+  }
+  .newsletter{ background:#111; }
+}
