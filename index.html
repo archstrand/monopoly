@@ -3,135 +3,110 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>The Current — Gothic Magazine</title>
-  <meta name="description" content="A dark, Atlantic-style magazine layout in charcoal gray and Yale blue." />
+  <title>The Current — Magazine</title>
+  <meta name="description" content="The Current — a dark, Atlantic-style magazine layout." />
 
   <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
   <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
-
-  <!-- Utility Bar -->
+  <!-- Utility bar -->
   <div class="utility">
-    <div class="container utility__inner">
-      <time class="utility__date" datetime="2025-10-15">October 15, 2025</time>
-      <div class="utility__links">
-        <a href="#" class="utility__link">Subscribe</a>
-        <a href="#" class="utility__link">Sign In</a>
+    <div class="container">
+      <time datetime="2025-10-15">October 15, 2025</time>
+      <div class="utility-links">
+        <a href="#">Subscribe</a>
+        <a href="#">Sign In</a>
       </div>
     </div>
   </div>
 
-  <!-- Header -->
-  <header class="site-header">
-    <div class="container header__inner">
-      <a class="brand" href="/" aria-label="Home">
-        <span class="brand__masthead">The Current</span>
-      </a>
-      <nav class="primary-nav" aria-label="Primary">
-        <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu">Menu</button>
-        <ul id="nav-menu" class="primary-nav__list">
-          <li><a href="#">Politics</a></li>
-          <li><a href="#">Ideas</a></li>
-          <li><a href="#">Culture</a></li>
-          <li><a href="#">Tech</a></li>
-          <li><a href="#">Science</a></li>
-          <li><a href="#">World</a></li>
-        </ul>
-      </nav>
-    </div>
+  <!-- Masthead -->
+  <header class="masthead">
+    <h1 class="brand">The Current</h1>
+    <nav class="nav">
+      <ul>
+        <li><a href="#">Politics</a></li>
+        <li><a href="#">Ideas</a></li>
+        <li><a href="#">Culture</a></li>
+        <li><a href="#">Tech</a></li>
+        <li><a href="#">Science</a></li>
+        <li><a href="#">World</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <!-- Hero -->
+  <!-- Hero Section -->
   <section class="hero">
-    <div class="container hero__grid">
-      <article class="feature">
-        <a class="feature__image-link" href="#">
-          <img src="https://picsum.photos/1200/800?random=101" alt="Feature story" class="feature__image" />
-        </a>
-        <div class="feature__kicker">Ideas</div>
-        <h1 class="feature__title"><a href="#">The Argument That Echoes Through Centuries</a></h1>
-        <p class="feature__dek">A meditation on belief, progress, and the strange persistence of history in modern thought.</p>
-        <div class="byline">By <a href="#">Alex Writer</a></div>
+    <div class="container hero-grid">
+      <article class="lead-story">
+        <div class="img-placeholder"></div>
+        <h2 class="headline">[Lead Headline Here]</h2>
+        <p class="summary">[Short summary or subtitle for the lead story goes here.]</p>
       </article>
 
-      <aside class="side-stack" aria-label="Editor’s Picks">
-        <h2 class="eyebrow">Editor’s Picks</h2>
-        <ul class="stack">
-          <li><a href="#"><span class="stack__kicker">Culture</span><span class="stack__title">How the Season Changed TV</span></a></li>
-          <li><a href="#"><span class="stack__kicker">Science</span><span class="stack__title">The Quiet Math of Survival</span></a></li>
-          <li><a href="#"><span class="stack__kicker">Politics</span><span class="stack__title">What Compromise Really Means</span></a></li>
-        </ul>
+      <aside class="side-stories">
+        <article class="side-story">
+          <div class="img-placeholder small"></div>
+          <h3>[Side Story One]</h3>
+        </article>
+        <article class="side-story">
+          <div class="img-placeholder small"></div>
+          <h3>[Side Story Two]</h3>
+        </article>
+        <article class="side-story">
+          <div class="img-placeholder small"></div>
+          <h3>[Side Story Three]</h3>
+        </article>
       </aside>
     </div>
   </section>
 
   <!-- Article River -->
-  <main id="main" class="container river">
-    <section aria-labelledby="latest-heading" class="river__section">
-      <h2 id="latest-heading" class="section-head">Latest</h2>
-
-      <div class="cards">
-        <article class="card">
-          <a href="#"><img src="https://picsum.photos/640/420?random=11" alt="" class="card__image" /></a>
-          <div class="card__body">
-            <div class="card__kicker">Politics</div>
-            <h3 class="card__title"><a href="#">The Coalition That Wasn’t</a></h3>
-            <p class="card__dek">Inside the mechanics of negotiation and the myths of unity.</p>
-          </div>
+  <main class="river container">
+    <section>
+      <h2 class="section-title">Latest</h2>
+      <div class="grid">
+        <article class="story">
+          <div class="img-placeholder"></div>
+          <h3>[Story Title]</h3>
+          <p>[Short description or excerpt goes here.]</p>
         </article>
-
-        <article class="card">
-          <a href="#"><img src="https://picsum.photos/640/420?random=12" alt="" class="card__image" /></a>
-          <div class="card__body">
-            <div class="card__kicker">Tech</div>
-            <h3 class="card__title"><a href="#">When Tools Start Arguing Back</a></h3>
-            <p class="card__dek">Why the next wave of software feels less like using and more like debating.</p>
-          </div>
+        <article class="story">
+          <div class="img-placeholder"></div>
+          <h3>[Story Title]</h3>
+          <p>[Short description or excerpt goes here.]</p>
         </article>
-
-        <article class="card">
-          <a href="#"><img src="https://picsum.photos/640/420?random=13" alt="" class="card__image" /></a>
-          <div class="card__body">
-            <div class="card__kicker">Science</div>
-            <h3 class="card__title"><a href="#">Mapping the Edges of Enough</a></h3>
-            <p class="card__dek">A guide to scarcity that begins where intuition breaks.</p>
-          </div>
+        <article class="story">
+          <div class="img-placeholder"></div>
+          <h3>[Story Title]</h3>
+          <p>[Short description or excerpt goes here.]</p>
         </article>
       </div>
     </section>
-
-    <aside class="newsletter">
-      <h2>Get our newsletter</h2>
-      <p>Sharp analysis in your inbox.</p>
-      <form class="nl-form" action=\"#\" method=\"post\">
-        <input id=\"email\" name=\"email\" type=\"email\" placeholder=\"you@example.com\" required />
-        <button type=\"submit\">Subscribe</button>
-      </form>
-    </aside>
   </main>
 
-  <footer class=\"site-footer\">
-    <div class=\"container footer__grid\">
-      <nav aria-label=\"Footer\">
-        <ul class=\"footer__nav\">
-          <li><a href=\"#\">About</a></li>
-          <li><a href=\"#\">Masthead</a></li>
-          <li><a href=\"#\">Contact</a></li>
-          <li><a href=\"#\">Careers</a></li>
-          <li><a href=\"#\">Privacy</a></li>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <nav>
+        <ul>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Privacy</a></li>
+          <li><a href="#">Terms</a></li>
         </ul>
       </nav>
-      <div class=\"footer__copy\">© <span id=\"year\"></span> The Current</div>
+      <p>© <span id="year"></span> The Current</p>
     </div>
   </footer>
 
   <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById("year").textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
-
