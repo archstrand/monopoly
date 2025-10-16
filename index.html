@@ -3,18 +3,18 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Your Magazine</title>
-  <meta name="description" content="An Atlantic-inspired magazine layout." />
+  <title>The Current — Gothic Magazine</title>
+  <meta name="description" content="A dark, Atlantic-style magazine layout in charcoal gray and Yale blue." />
 
-  <!-- Fonts: modern serif + crisp sans (free + permissive) -->
-  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="styles.css">
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <!-- Top utility bar -->
+  <!-- Utility Bar -->
   <div class="utility">
     <div class="container utility__inner">
       <time class="utility__date" datetime="2025-10-15">October 15, 2025</time>
@@ -25,12 +25,11 @@
     </div>
   </div>
 
-  <!-- Header / Masthead -->
+  <!-- Header -->
   <header class="site-header">
     <div class="container header__inner">
       <a class="brand" href="/" aria-label="Home">
-        <!-- Keep this your own brand name — do not use others' wordmarks -->
-        <span class="brand__masthead">Your Magazine</span>
+        <span class="brand__masthead">The Current</span>
       </a>
       <nav class="primary-nav" aria-label="Primary">
         <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu">Menu</button>
@@ -46,152 +45,93 @@
     </div>
   </header>
 
-  <!-- Hero / Feature -->
+  <!-- Hero -->
   <section class="hero">
     <div class="container hero__grid">
       <article class="feature">
         <a class="feature__image-link" href="#">
-          <img src="https://picsum.photos/1200/800?random=3" alt="Feature story image" class="feature__image" />
+          <img src="https://picsum.photos/1200/800?random=101" alt="Feature story" class="feature__image" />
         </a>
         <div class="feature__kicker">Ideas</div>
-        <h1 class="feature__title"><a href="#">The Big Argument Shaping Tomorrow</a></h1>
-        <p class="feature__dek">A crisp, persuasive standfirst that frames the debate and hooks serious readers.</p>
+        <h1 class="feature__title"><a href="#">The Argument That Echoes Through Centuries</a></h1>
+        <p class="feature__dek">A meditation on belief, progress, and the strange persistence of history in modern thought.</p>
         <div class="byline">By <a href="#">Alex Writer</a></div>
       </article>
 
-      <aside class="side-stack" aria-label="Editor’s picks">
+      <aside class="side-stack" aria-label="Editor’s Picks">
         <h2 class="eyebrow">Editor’s Picks</h2>
         <ul class="stack">
-          <li class="stack__item">
-            <a href="#" class="stack__link">
-              <span class="stack__kicker">Culture</span>
-              <span class="stack__title">How the Season Changed TV</span>
-            </a>
-          </li>
-          <li class="stack__item">
-            <a href="#" class="stack__link">
-              <span class="stack__kicker">Science</span>
-              <span class="stack__title">The Quiet Math of Survival</span>
-            </a>
-          </li>
-          <li class="stack__item">
-            <a href="#" class="stack__link">
-              <span class="stack__kicker">Politics</span>
-              <span class="stack__title">What Compromise Really Means</span>
-            </a>
-          </li>
+          <li><a href="#"><span class="stack__kicker">Culture</span><span class="stack__title">How the Season Changed TV</span></a></li>
+          <li><a href="#"><span class="stack__kicker">Science</span><span class="stack__title">The Quiet Math of Survival</span></a></li>
+          <li><a href="#"><span class="stack__kicker">Politics</span><span class="stack__title">What Compromise Really Means</span></a></li>
         </ul>
       </aside>
     </div>
   </section>
 
-  <!-- River -->
-  <main id="main" class="container river" role="main">
+  <!-- Article River -->
+  <main id="main" class="container river">
     <section aria-labelledby="latest-heading" class="river__section">
       <h2 id="latest-heading" class="section-head">Latest</h2>
 
       <div class="cards">
-        <!-- Card -->
         <article class="card">
-          <a href="#" class="card__media-link">
-            <img src="https://picsum.photos/640/420?random=11" alt="" class="card__image" loading="lazy" />
-          </a>
+          <a href="#"><img src="https://picsum.photos/640/420?random=11" alt="" class="card__image" /></a>
           <div class="card__body">
             <div class="card__kicker">Politics</div>
             <h3 class="card__title"><a href="#">The Coalition That Wasn’t</a></h3>
-            <p class="card__dek">Inside the messy mechanics of negotiation and the myths we tell about unity.</p>
-            <div class="card__meta">By Jamie R. • 8 min read</div>
+            <p class="card__dek">Inside the mechanics of negotiation and the myths of unity.</p>
           </div>
         </article>
 
         <article class="card">
-          <a href="#" class="card__media-link">
-            <img src="https://picsum.photos/640/420?random=12" alt="" class="card__image" loading="lazy" />
-          </a>
+          <a href="#"><img src="https://picsum.photos/640/420?random=12" alt="" class="card__image" /></a>
           <div class="card__body">
             <div class="card__kicker">Tech</div>
             <h3 class="card__title"><a href="#">When Tools Start Arguing Back</a></h3>
-            <p class="card__dek">Why the next wave of software feels less like using an app and more like debate.</p>
-            <div class="card__meta">By Casey Dot • 6 min read</div>
+            <p class="card__dek">Why the next wave of software feels less like using and more like debating.</p>
           </div>
         </article>
 
         <article class="card">
-          <a href="#" class="card__media-link">
-            <img src="https://picsum.photos/640/420?random=13" alt="" class="card__image" loading="lazy" />
-          </a>
+          <a href="#"><img src="https://picsum.photos/640/420?random=13" alt="" class="card__image" /></a>
           <div class="card__body">
             <div class="card__kicker">Science</div>
             <h3 class="card__title"><a href="#">Mapping the Edges of Enough</a></h3>
-            <p class="card__dek">A practical guide to scarcity that starts where intuition breaks.</p>
-            <div class="card__meta">By R. Chen • 9 min read</div>
+            <p class="card__dek">A guide to scarcity that begins where intuition breaks.</p>
           </div>
         </article>
       </div>
     </section>
 
-    <!-- Section rail with opinion/essays vibe -->
-    <section aria-labelledby="ideas-heading" class="river__section">
-      <h2 id="ideas-heading" class="section-head">Ideas</h2>
-      <div class="listies">
-        <article class="listie">
-          <div class="listie__kicker">Essay</div>
-          <h3 class="listie__title"><a href="#">The Case for Boredom</a></h3>
-          <p class="listie__dek">Attention is not a renewable resource. Spend it like it matters.</p>
-        </article>
-        <article class="listie">
-          <div class="listie__kicker">Argument</div>
-          <h3 class="listie__title"><a href="#">Don’t Fear the Niche</a></h3>
-          <p class="listie__dek">Mass culture isn’t dying—it’s decentralizing.</p>
-        </article>
-        <article class="listie">
-          <div class="listie__kicker">Column</div>
-          <h3 class="listie__title"><a href="#">The Small Politics of Daily Life</a></h3>
-          <p class="listie__dek">Where values actually get practiced: errands and inboxes.</p>
-        </article>
-      </div>
-    </section>
-
-    <!-- Newsletter block -->
-    <aside class="newsletter" aria-labelledby="nl-head">
-      <h2 id="nl-head">Get our newsletter</h2>
-      <p>Sharp analysis, in your inbox. No noise.</p>
-      <form class="nl-form" action="#" method="post">
-        <label for="email" class="sr-only">Email</label>
-        <input id="email" name="email" type="email" required placeholder="you@example.com" />
-        <button type="submit">Subscribe</button>
+    <aside class="newsletter">
+      <h2>Get our newsletter</h2>
+      <p>Sharp analysis in your inbox.</p>
+      <form class="nl-form" action=\"#\" method=\"post\">
+        <input id=\"email\" name=\"email\" type=\"email\" placeholder=\"you@example.com\" required />
+        <button type=\"submit\">Subscribe</button>
       </form>
-      <small class="nl-note">By subscribing, you agree to our Terms & Privacy.</small>
     </aside>
   </main>
 
-  <!-- Footer -->
-  <footer class="site-footer">
-    <div class="container footer__grid">
-      <nav aria-label="Footer">
-        <ul class="footer__nav">
-          <li><a href="#">About</a></li>
-          <li><a href="#">Masthead</a></li>
-          <li><a href="#">Contact</a></li>
-          <li><a href="#">Careers</a></li>
-          <li><a href="#">Privacy</a></li>
+  <footer class=\"site-footer\">
+    <div class=\"container footer__grid\">
+      <nav aria-label=\"Footer\">
+        <ul class=\"footer__nav\">
+          <li><a href=\"#\">About</a></li>
+          <li><a href=\"#\">Masthead</a></li>
+          <li><a href=\"#\">Contact</a></li>
+          <li><a href=\"#\">Careers</a></li>
+          <li><a href=\"#\">Privacy</a></li>
         </ul>
       </nav>
-      <div class="footer__copy">© <span id="year"></span> Your Magazine</div>
+      <div class=\"footer__copy\">© <span id=\"year\"></span> The Current</div>
     </div>
   </footer>
 
   <script>
-    // Simple a11y-friendly menu toggle
-    const btn = document.querySelector('.nav-toggle');
-    const menu = document.querySelector('#nav-menu');
-    btn?.addEventListener('click', () => {
-      const expanded = btn.getAttribute('aria-expanded') === 'true';
-      btn.setAttribute('aria-expanded', String(!expanded));
-      menu.classList.toggle('is-open');
-    });
-    // year
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
+
